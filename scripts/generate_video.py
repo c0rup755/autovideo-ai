@@ -1,6 +1,8 @@
 import argparse
-from autovideo.workflow.auto_pipeline import run_pipeline
-
+import sys, os
+# Ensure project root is in PYTHONPATH
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+from autovideo.autovideo.workflow.auto_pipeline import run_pipeline
 parser = argparse.ArgumentParser()
 parser.add_argument("--script", type=str, required=True)
 parser.add_argument("--assets", type=str, required=True)
